@@ -1,101 +1,102 @@
-import Image from "next/image";
+"use client";
+import React from "react";
 
-export default function Home() {
+import SectionCard from "./components/SectionCard";
+import GiftCard from "./components/GiftCard";
+import ProductSlider from "./components/ProductSlider";
+import ImageSlider from "./components/ImageSlider";
+import Slider from "./components/Slider";
+import AesopFooter from "./components/AesopFooter";
+
+const HomePage = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className="min-h-screen">
+      <div className="bg-[#f6f5e8] pb-24">
+        <Slider />
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="bg-[#e7e6e0] flex flex-col gap-20">
+        <SectionCard
+          title="Festive giving"
+          heading="A complimentary sleeve for your gifts"
+          description="Inspired by the verve of the season, a specially designed gift sleeve will swaddle your purchases when you select the ‘gift packaging’ option at checkout. Exclusions apply."
+          ctaText="Explore gifts"
+          imageSrc="Aesop_Festive.jpg"
+        />
+
+        <div className="flex items-center flex-col md:flex-row md:px-24 gap-4 px-4 pt-24">
+          <GiftCard
+            imageSrc="./aromatic.avif"
+            title="Six aromatic encounters"
+            description="Fragrance Anthology Volume I invites curious noses to explore and experience our range of unorthodox aromas, from the fresh to the floral, the woody and the opulent."
+          />
+          <GiftCard
+            videoSrc="./GiftVideo.mp4"
+            title="Home gifts"
+            description="From hand care to home fragrances, explore a curation of products that are ideal for hospitable hosts, the house-proud or the recently moved in."
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        <ProductSlider />
+
+        <div className="flex items-center flex-col md:flex-row md:px-24 gap-4 px-4 pt-24">
+          <GiftCard
+            imageSrc="./travel-bag.avif"
+            title="For their travel bag"
+            description="Explore a range of travel-size formulations for seasoned excursionists, including preselected kits, sun care and in-flight essentials."
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <GiftCard
+            videoSrc="./Noteworthy-gifts.mp4"
+            title="Noteworthy gifts"
+            description="From time-honoured body care to standout skin care—explore a range of formulations that remain dependably crowd-pleasing."
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+
+        <SectionCard
+          title="Our online offering"
+          heading="Gestures to enhance your experience"
+          description="Discover a suite of complimentary additions available with every order, including curated product samples, gift wrapping in our signature cotton bag and personalised gift messaging."
+          ctaText="Explore our online offering"
+          className="md:flex-row-reverse"
+          shouldRenderSlider={true}
+          renderComponent={<GiftCard videoSrc="/Gestures.mp4" />}
+        />
+
+        <SectionCard
+          title="Festive giving"
+          heading="Corporate gifts"
+          description="Find a variety of gift-giving options, ideal for honouring treasured colleagues and clients. Trained consultants will be pleased to guide your selections and assist with delivery."
+          ctaText="Learn more about this service"
+          imageSrc="/women.avif"
+        />
+
+        <SectionCard
+          heading="Store locator"
+          description="Our consultants are available to host you in-store and provide tailored guidance on gift purchases."
+          ctaText="Find a nearby store"
+          className="md:flex-row-reverse"
+          shouldRenderSlider={true}
+          renderComponent={<ImageSlider />}
+        />
+
+        <SectionCard
+          heading="Virtual guidance from home's comfort"
+          description="For advice on our range of formulations, we welcome you to book a complimentary live consultation. Following your appointment, you will receive a bespoke product sample when you place an order."
+          ctaText="Discover live consultation"
+          imageSrc="/HandImage.avif"
+        />
+
+        <div className="py-24">
+          <h1 className="text-center font-semibold text-2xl">
+            ‘The manner of giving is worth more than the gift.’
+          </h1>
+          <p className="text-center font-semibold">Pierre Corneille</p>
+        </div>
+
+        <AesopFooter />
+      </div>
     </div>
   );
-}
+};
+
+export default HomePage;
