@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { slides } from "../utils";
 import { ChevronLeft, ChevronRight, MessageCircle, Pause } from "lucide-react";
 
-const Slider = () => {
+const Slider = ({ className = "" }) => {
   const [currentSlide, setCurrentSlide] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false);
   const totalSlides = slides.length;
@@ -30,8 +30,8 @@ const Slider = () => {
   const current = slides[currentSlide - 1];
 
   return (
-    <main className="relative w-full overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-2 min-h-[400px] md:min-h-[600px] mb-20">
+    <main className={`relative w-full overflow-hidden ${className}`}>
+      <div className="flex flex-col-reverse md:flex-row min-h-[400px] md:min-h-[600px] mb-20">
         <div className="p-6 md:p-20 flex flex-col justify-center">
           <span className="text-sm font-semibold md:text-base mb-2 text-gray-600">
             {current.subtitle}
@@ -52,17 +52,14 @@ const Slider = () => {
             </span>
           </button>
         </div>
-
         <div
-          className={`${current.bgColor} relative min-h-[300px] md:min-h-full flex justify-center items-center`}
-          style={{ height: "400px" }}
+          className={`${current.bgColor} relative w-full flex justify-center items-center`}
         >
           {current.imageSrc ? (
             <img
               src={current.imageSrc}
               alt={current.title}
-              className="w-full h-full object-cover"
-              style={{ maxHeight: "100%" }}
+              className="w-full h-[300px] md:h-[600px] object-cover"
             />
           ) : (
             <video
@@ -70,14 +67,13 @@ const Slider = () => {
               autoPlay
               loop
               muted
-              className="w-full h-full object-cover"
-              style={{ maxHeight: "100%" }}
+              className="w-full h-[300px] md:h-[600px] object-cover"
             />
           )}
           <div className="absolute bottom-4 right-4 z-10">
             <MessageCircle
               className="w-8 h-8 md:w-10 md:h-10 text-white cursor-pointer 
-      hover:scale-110 transition-transform"
+              hover:scale-110 transition-transform"
             />
           </div>
         </div>
@@ -85,7 +81,7 @@ const Slider = () => {
 
       <div
         className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-2 md:space-x-4 
-        bg-transparent backdrop-blur-sm rounded-full px-4 py-2"
+        bg-transparent backdrop-blur-sm rounded-full  py-2"
       >
         <button
           onClick={prevSlide}

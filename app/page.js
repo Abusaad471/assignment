@@ -11,11 +11,11 @@ import AesopFooter from "./components/AesopFooter";
 const HomePage = () => {
   return (
     <div className="min-h-screen">
-      <div className="bg-[#f6f5e8] pb-24">
-        <Slider />
+      <div className="bg-[#f6f5e8] pb-16">
+        <Slider className="" />
       </div>
 
-      <div className="bg-[#e7e6e0] flex flex-col gap-20">
+      <div className="bg-[#e7e6e0] flex flex-col gap-10 md:gap-16">
         <SectionCard
           title="Festive giving"
           heading="A complimentary sleeve for your gifts"
@@ -24,7 +24,7 @@ const HomePage = () => {
           imageSrc="Aesop_Festive.jpg"
         />
 
-        <div className="flex items-center flex-col md:flex-row md:px-24 gap-4 px-4 pt-24">
+        <div className="flex items-center flex-col md:flex-row md:px-24 md:gap-4 gap-16 px-4 pt-8 md:pt-24">
           <GiftCard
             imageSrc="./aromatic.avif"
             title="Six aromatic encounters"
@@ -39,7 +39,7 @@ const HomePage = () => {
 
         <ProductSlider />
 
-        <div className="flex items-center flex-col md:flex-row md:px-24 gap-4 px-4 pt-24">
+        <div className="flex items-center flex-col md:flex-row md:px-24 md:gap-4 gap-16 px-4 pt-8 md:pt-24">
           <GiftCard
             imageSrc="./travel-bag.avif"
             title="For their travel bag"
@@ -74,7 +74,7 @@ const HomePage = () => {
           heading="Store locator"
           description="Our consultants are available to host you in-store and provide tailored guidance on gift purchases."
           ctaText="Find a nearby store"
-          className="md:flex-row-reverse"
+          className="md:flex-row-reverse mt-8"
           shouldRenderSlider={true}
           renderComponent={<ImageSlider />}
         />
@@ -86,8 +86,8 @@ const HomePage = () => {
           imageSrc="/HandImage.avif"
         />
 
-        <div className="py-24">
-          <h1 className="text-center font-semibold text-2xl">
+        <div className="md:py-16 py-8">
+          <h1 className="text-center font-semibold text-lg md:text-2xl">
             ‘The manner of giving is worth more than the gift.’
           </h1>
           <p className="text-center font-semibold">Pierre Corneille</p>

@@ -40,7 +40,7 @@ const SectionCard = ({
         </div>
       </div>
 
-      <div className="w-full lg:w-[35%] flex flex-col px-6 lg:px-12 py-8 lg:py-12">
+      <div className="w-full lg:w-[35%] flex flex-col px-6 lg:px-12 md:py-8 pb-16 lg:py-12">
         <div className="max-w-xl">
           <p className="text-sm tracking-wide text-black font-semibold uppercase">
             {title}

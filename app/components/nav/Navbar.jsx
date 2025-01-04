@@ -24,7 +24,7 @@ const Navbar = () => {
       </div>
 
       <nav className="bg-slate-100 border-b">
-        <div className="container mx-auto px-4 flex justify-between items-center py-4">
+        <div className="container mx-auto px-4 md:py-8 py-4 flex justify-between items-center">
           <div className="flex items-center justify-between w-full md:ml-12">
             <div className="hidden md:flex items-center space-x-6">
               {navigationLinks.map((link) => (

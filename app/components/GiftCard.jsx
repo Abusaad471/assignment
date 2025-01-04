@@ -13,7 +13,7 @@ const GiftCard = ({
       <div
         className={`flex flex-col justify-between ${
           imagePosition === "right" ? "md:flex-row-reverse" : "md:flex-col"
-        } gap-8 mb-16`}
+        } gap-8 md:mb-16`}
       >
         <div className="w-full">
           {videoSrc ? (
