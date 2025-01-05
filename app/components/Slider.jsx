@@ -58,7 +58,7 @@ const Slider = ({ className = "" }) => {
               <img
                 src={current.imageSrc}
                 alt={current.title}
-                className="w-full h-[300px] md:h-[600px] object-cover"
+                className="w-full h-[300px] md:h-[600px] md:w-[1600px] object-cover"
               />
             ) : (
               <video
@@ -66,7 +66,7 @@ const Slider = ({ className = "" }) => {
                 autoPlay
                 loop
                 muted
-                className="w-full h-[300px] md:h-[600px] object-cover"
+                className="w-full h-[300px] md:h-[600px] md:w-full object-cover"
               />
             )}
             <div className="absolute bottom-4 right-4 z-10">

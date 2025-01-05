@@ -16,7 +16,7 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Email address"
-              className="w-full bg-transparent p-2 border border-white rounded text-4xl font-bold text-white md:text-base"
+              className="w-full bg-transparent p-2 border border-white rounded md:text-xl font-bold text-white text-base"
             />
           </div>
           <label className="flex items-start gap-2 text-xs md:text-sm mt-4">
