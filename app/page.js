@@ -11,17 +11,18 @@ import AesopFooter from "./components/AesopFooter";
 const HomePage = () => {
   return (
     <div className="min-h-screen">
-      <div className="bg-[#f6f5e8] pb-16">
+      <div className="bg-[#f6f5e8] md:pb-16">
         <Slider className="" />
       </div>
 
-      <div className="bg-[#e7e6e0] flex flex-col gap-10 md:gap-16">
+      <div className="bg-[#e7e6e0] flex flex-col gap-10 md:gap-16 pt-4">
         <SectionCard
           title="Festive giving"
           heading="A complimentary sleeve for your gifts"
           description="Inspired by the verve of the season, a specially designed gift sleeve will swaddle your purchases when you select the ‘gift packaging’ option at checkout. Exclusions apply."
           ctaText="Explore gifts"
           imageSrc="Aesop_Festive.jpg"
+          className=""
         />
 
         <div className="flex items-center flex-col md:flex-row md:px-24 md:gap-4 gap-16 px-4 pt-8 md:pt-24">
@@ -59,7 +60,9 @@ const HomePage = () => {
           ctaText="Explore our online offering"
           className="md:flex-row-reverse"
           shouldRenderSlider={true}
-          renderComponent={<GiftCard videoSrc="/Gestures.mp4" />}
+          renderComponent={
+            <GiftCard videoSrc="/Gestures.mp4" className="pl-4" />
+          }
         />
 
         <SectionCard

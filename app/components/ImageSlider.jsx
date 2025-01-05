@@ -21,7 +21,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto">
+    <div className="relative w-full max-w-6xl mx-auto md:p1-1 pl-4">
       <button
         onClick={handlePrev}
         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white transition-colors"
@@ -49,7 +49,7 @@ const ImageSlider = () => {
               <img
                 src={product.image}
                 alt={`Slide ${index + 1}`}
-                className="w-full object-cover rounded-lg"
+                className="w-full object-cover "
               />
             </div>
           ))}

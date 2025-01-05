@@ -15,7 +15,7 @@ const GiftCard = ({
           imagePosition === "right" ? "md:flex-row-reverse" : "md:flex-col"
         } gap-8 md:mb-16`}
       >
-        <div className="w-full">
+        <div className={`w-full ${className}`}>
           {videoSrc ? (
             <video
               src={videoSrc}
@@ -23,7 +23,7 @@ const GiftCard = ({
               loop
               muted
               playsInline
-              className="object-cover w-full h-3/4 "
+              className="object-cover  w-full h-3/4 "
             />
           ) : (
             <img

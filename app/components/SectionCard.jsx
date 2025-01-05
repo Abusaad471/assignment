@@ -27,7 +27,7 @@ const SectionCard = ({
                 <img
                   src={imageSrc}
                   alt="Gift packaging preview"
-                  className="object-cover w-full h-full md:w-[80%] lg:w-[90%] xl:w-full"
+                  className="object-cover w-full h-full pr-4 md:w-[80%] lg:w-[90%] xl:w-full"
                 />
               )}
           {videoSrc && (
@@ -40,7 +40,9 @@ const SectionCard = ({
         </div>
       </div>
 
-      <div className="w-full lg:w-[35%] flex flex-col px-6 lg:px-12 md:py-8 pb-16 lg:py-12">
+      <div
+        className={`w-full lg:w-[35%] flex flex-col px-4 lg:px-12 md:py-8 pb-16 lg:py-12 ${className}`}
+      >
         <div className="max-w-xl">
           <p className="text-sm tracking-wide text-black font-semibold uppercase">
             {title}
